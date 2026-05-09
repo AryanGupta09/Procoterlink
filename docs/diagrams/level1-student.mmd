@@ -1,0 +1,33 @@
+flowchart LR
+  classDef process fill:#e0f7ff,stroke:#06b6d4,stroke-width:2px
+  classDef store fill:#f1f5f9,stroke:#475569,stroke-width:2px
+  classDef ext fill:#fef9c3,stroke:#ca8a04,stroke-width:2px
+
+  Student[Student/Participant]:::ext
+
+  subgraph Candidate App
+    S1((Authenticate User)):::process
+    S2((Take Exam)):::process
+    S3((Submit Answers/Evidence)):::process
+    S4((View Results/Status)):::process
+  end
+
+  Auth[(Firebase Auth)]:::store
+  DB[(Firestore)]:::store
+  Storage[(Firebase Storage)]:::store
+
+  Student -- credentials --> S1
+  S1 -- signIn/signUp --> Auth
+  Auth -- session --> S1
+
+  Student -- start exam --> S2
+  S2 -- fetch exam content --> DB
+  S2 -- answers/timestamps --> S3
+
+  S3 -- write submissions --> DB
+  S3 -- upload media evidence --> Storage
+
+  S4 -- fetch results/status --> DB
+  S4 -- results/status --> Student
+
+

@@ -1,0 +1,26 @@
+{
+  "name": "ProctorLink - Powered by LogikSutra AI Recruitment",
+  "short_name": "ProctorLink",
+  "description": "Advanced online proctoring platform for secure exams powered by LogikSutra AI Recruitment",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1A2A80",
+  "theme_color": "#3B38A0",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["education", "productivity", "business"],
+  "lang": "en",
+  "dir": "ltr"
+}

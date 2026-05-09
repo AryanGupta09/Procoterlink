@@ -1,0 +1,36 @@
+flowchart LR
+  classDef process fill:#e0f7ff,stroke:#06b6d4,stroke-width:2px,color:#0f172a
+  classDef store fill:#f1f5f9,stroke:#475569,stroke-width:2px,color:#0f172a
+  classDef ext fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,color:#0f172a
+
+  Admin[Admin/Organizer]:::ext
+  Student[Student/Participant]:::ext
+  GoogleAI[Google AI - Genkit and Gemini]:::ext
+
+  subgraph ProctorLink Web App - Next.js
+    P0((ProctorLink System)):::process
+  end
+
+  Auth[(Firebase Auth)]:::store
+  DB[(Firestore)]:::store
+  Storage[(Firebase Storage)]:::store
+
+  Admin -- login/signup creds --> P0
+  Student -- login/signup creds --> P0
+  P0 -- auth requests --> Auth
+  Auth -- tokens/session --> P0
+
+  Admin -- exam config, questions, policies --> P0
+  P0 -- create/update exams --> DB
+
+  Student -- answers, evidence (camera/screen) --> P0
+  P0 -- write submissions/evidence --> DB
+  P0 -- store media --> Storage
+
+  P0 -- prompts/questions --> GoogleAI
+  GoogleAI -- generated text/questions/summaries --> P0
+
+  P0 -- results, feedback, status --> Admin
+  P0 -- exam content, timer, feedback --> Student
+
+

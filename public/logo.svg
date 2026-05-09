@@ -1,0 +1,26 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon part -->
+  <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" stroke="#7A85C1" stroke-width="2"/>
+  
+  <!-- Graduation cap -->
+  <path d="M10 18L20 14L30 18L20 22L10 18Z" fill="white"/>
+  <path d="M14 20V24C14 25.1 16.8 26 20 26C23.2 26 26 25.1 26 24V20" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="28" cy="18" r="1" fill="white"/>
+  
+  <!-- Security camera indicator -->
+  <circle cx="8" cy="8" r="2.5" fill="#B2B0E8" opacity="0.9"/>
+  <circle cx="8" cy="8" r="1.2" fill="white"/>
+  
+  <!-- Text part -->
+  <text x="45" y="16" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A2A80">ProctorLink</text>
+  <text x="45" y="28" font-family="Arial, sans-serif" font-size="8" fill="#7A85C1">Powered by LogikSutra AI</text>
+  
+  <!-- Define gradient -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B38A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A2A80;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
+

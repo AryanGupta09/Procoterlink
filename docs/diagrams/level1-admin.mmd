@@ -1,0 +1,35 @@
+flowchart LR
+  classDef process fill:#e0f7ff,stroke:#06b6d4,stroke-width:2px
+  classDef store fill:#f1f5f9,stroke:#475569,stroke-width:2px
+  classDef ext fill:#fef9c3,stroke:#ca8a04,stroke-width:2px
+
+  Admin[Admin/Organizer]:::ext
+  GoogleAI[Google AI - Genkit and Gemini]:::ext
+
+  subgraph Admin Portal
+    A1((Authenticate User)):::process
+    A2((Manage Exams)):::process
+    A3((Generate Questions/Descriptions)):::process
+    A4((View Results/Analytics)):::process
+  end
+
+  Auth[(Firebase Auth)]:::store
+  DB[(Firestore)]:::store
+
+  Admin -- credentials --> A1
+  A1 -- signIn/signOut --> Auth
+  Auth -- session --> A1
+
+  Admin -- exam settings/templates --> A2
+  A2 -- CRUD exams, groups, org --> DB
+
+  A2 -- generation request --> A3
+  A3 -- prompts --> GoogleAI
+  GoogleAI -- generated questions/descriptions --> A3
+  A3 -- write generated content --> DB
+
+  Admin -- filter, query --> A4
+  A4 -- read submissions, scores --> DB
+  A4 -- results/analytics --> Admin
+
+

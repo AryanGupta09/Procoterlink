@@ -1,0 +1,33 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon background -->
+  <circle cx="30" cy="30" r="26" fill="url(#fullLogoGradient)" stroke="#7A85C1" stroke-width="2"/>
+  
+  <!-- Graduation cap icon -->
+  <path d="M15 27L30 21L45 27L30 33L15 27Z" fill="white"/>
+  <path d="M21 30V36C21 37.7 24.6 39 30 39C35.4 39 39 37.7 39 36V30" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="42" cy="27" r="1.5" fill="white"/>
+  
+  <!-- Security/monitoring element -->
+  <circle cx="12" cy="12" r="4" fill="#B2B0E8" opacity="0.9"/>
+  <circle cx="12" cy="12" r="2" fill="white"/>
+  
+  <!-- Main text -->
+  <text x="70" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1A2A80">ProctorLink</text>
+  
+  <!-- Subtitle -->
+  <text x="70" y="40" font-family="Arial, sans-serif" font-size="10" fill="#7A85C1">Powered by LogikSutra AI Recruitment</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="190" cy="15" r="3" fill="#B2B0E8" opacity="0.6"/>
+  <circle cx="185" cy="45" r="2" fill="#7A85C1" opacity="0.6"/>
+  
+  <!-- Define gradient -->
+  <defs>
+    <linearGradient id="fullLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B38A0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7A85C1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A2A80;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
+
