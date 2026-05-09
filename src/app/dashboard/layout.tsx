@@ -129,7 +129,7 @@ export default function DashboardLayout({
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
-                <Button size="sm" className="w-full">
+                <Button size="sm" className="w-full" onClick={() => window.open('mailto:support@proctorlink.com', '_blank')}>
                   Contact Support
                 </Button>
               </CardContent>
@@ -211,7 +211,7 @@ export default function DashboardLayout({
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button size="sm" className="w-full">
+                    <Button size="sm" className="w-full" onClick={() => window.open('mailto:support@proctorlink.com', '_blank')}>
                       Contact Support
                     </Button>
                   </CardContent>
@@ -239,9 +239,14 @@ export default function DashboardLayout({
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuLabel className="font-normal text-xs text-muted-foreground truncate max-w-[200px]">{user?.email}</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Settings</DropdownMenuItem>
-              <DropdownMenuItem>Support</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => router.push('/dashboard/settings')}>
+                Settings
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => window.open('mailto:support@proctorlink.com', '_blank')}>
+                Support
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={handleLogout}>
                 <LogOut className="mr-2 h-4 w-4" />
