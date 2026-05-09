@@ -57,41 +57,44 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
   return (
     <div className="flex h-screen w-full flex-col">
       <header className="sticky top-0 z-10 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center justify-between">
-          <Link href="/student/dashboard" className="flex items-center space-x-2">
-            <GraduationCap className="h-6 w-6 text-brand-primary" />
-            <span className="font-bold text-xl">ProctorLink</span>
-            <span className="text-xs text-brand-medium/80 ml-2">Student Portal</span>
+        <div className="container flex h-14 items-center justify-between gap-2">
+          <Link href="/student/dashboard" className="flex items-center space-x-2 shrink-0">
+            <GraduationCap className="h-5 w-5 text-brand-primary" />
+            <span className="font-bold text-base sm:text-xl">ProctorLink</span>
+            <span className="hidden sm:inline text-xs text-brand-medium/80 ml-1">Student Portal</span>
           </Link>
           
-          <nav className="flex items-center gap-4">
+          <nav className="flex items-center gap-1 sm:gap-2">
             <Link href="/student/dashboard">
-              <Button variant="ghost" size="sm">My Exams</Button>
+              <Button variant="ghost" size="sm" className="px-2 sm:px-3">
+                <LayoutDashboard className="h-4 w-4 sm:mr-1" />
+                <span className="hidden sm:inline">My Exams</span>
+              </Button>
             </Link>
             <Link href="/student/profile">
-              <Button variant="ghost" size="sm">
-                <User className="h-4 w-4 mr-2" />
-                Profile
+              <Button variant="ghost" size="sm" className="px-2 sm:px-3">
+                <User className="h-4 w-4 sm:mr-1" />
+                <span className="hidden sm:inline">Profile</span>
               </Button>
             </Link>
             {userRole === 'both' && (
               <Link href="/dashboard">
-                <Button variant="ghost" size="sm">
-                  <LayoutDashboard className="h-4 w-4 mr-2" />
-                  Organizer Dashboard
+                <Button variant="ghost" size="sm" className="px-2 sm:px-3">
+                  <LayoutDashboard className="h-4 w-4 sm:mr-1" />
+                  <span className="hidden sm:inline">Organizer</span>
                 </Button>
               </Link>
             )}
-            <Button variant="outline" size="sm" onClick={handleLogout}>
-              <LogOut className="h-4 w-4 mr-2" />
-              Logout
+            <Button variant="outline" size="sm" className="px-2 sm:px-3" onClick={handleLogout}>
+              <LogOut className="h-4 w-4 sm:mr-1" />
+              <span className="hidden sm:inline">Logout</span>
             </Button>
           </nav>
         </div>
       </header>
       
       <main className="flex-1 overflow-y-auto">
-        <div className="container py-6">
+        <div className="container py-4 sm:py-6 px-3 sm:px-6">
           {children}
         </div>
       </main>

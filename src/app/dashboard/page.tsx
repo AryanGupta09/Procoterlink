@@ -327,14 +327,15 @@ export default function Dashboard() {
           </div>
         </CardHeader>
         <CardContent>
+          <div className="overflow-x-auto">
           <Table>
             <TableHeader>
               <TableRow>
                 <TableHead>Exam Title</TableHead>
-                <TableHead>Tags</TableHead>
+                <TableHead className="hidden md:table-cell">Tags</TableHead>
                 <TableHead className="text-center">Participants</TableHead>
                 <TableHead>Status</TableHead>
-                <TableHead>Created At</TableHead>
+                <TableHead className="hidden sm:table-cell">Created At</TableHead>
                 <TableHead>
                   <span className="sr-only">Actions</span>
                 </TableHead>
@@ -348,8 +349,8 @@ export default function Dashboard() {
               ) : (
                 exams.map((exam) => (
                   <TableRow key={exam.id}>
-                    <TableCell className="font-medium">{exam.title}</TableCell>
-                    <TableCell>
+                    <TableCell className="font-medium max-w-[150px] truncate">{exam.title}</TableCell>
+                    <TableCell className="hidden md:table-cell">
                       <div className="flex flex-wrap gap-1">
                           {exam.tags?.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
                       </div>
@@ -360,7 +361,7 @@ export default function Dashboard() {
                         {exam.isPaused ? "Paused" : "Active"}
                       </Badge>
                     </TableCell>
-                    <TableCell>{formatDate(exam.createdAt)}</TableCell>
+                    <TableCell className="hidden sm:table-cell">{formatDate(exam.createdAt)}</TableCell>
                     <TableCell>
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
@@ -439,12 +440,13 @@ export default function Dashboard() {
               )}
             </TableBody>
           </Table>
+          </div>
         </CardContent>
       </Card>
 
       {/* Copy Exam Dialog */}
       <Dialog open={copyDialogOpen} onOpenChange={setCopyDialogOpen}>
-        <DialogContent className="sm:max-w-[500px]">
+        <DialogContent className="w-[95vw] max-w-[500px]">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <Copy className="h-5 w-5" />

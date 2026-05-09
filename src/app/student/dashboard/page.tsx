@@ -136,15 +136,15 @@ export default function StudentDashboard() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <h1 className="text-3xl font-bold">My Dashboard</h1>
-          <p className="text-muted-foreground mt-1">
+          <h1 className="text-2xl sm:text-3xl font-bold">My Dashboard</h1>
+          <p className="text-muted-foreground mt-1 text-sm">
             Welcome back, {user?.email}
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <Button onClick={() => router.push('/student/skills')}>
+          <Button size="sm" onClick={() => router.push('/student/skills')}>
             Grow & Career Hub
           </Button>
         </div>
@@ -208,7 +208,7 @@ export default function StudentDashboard() {
       </Card>
 
       {/* Stats Cards */}
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Exams Taken</CardTitle>
@@ -288,22 +288,20 @@ export default function StudentDashboard() {
             <div className="space-y-4">
               {submissions.map((submission) => (
                 <Card key={submission.id} className="hover:shadow-md transition-shadow">
-                  <CardContent className="pt-6">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-lg mb-2">{submission.examTitle}</h3>
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <CardContent className="pt-4 pb-4">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-base sm:text-lg mb-1 truncate">{submission.examTitle}</h3>
+                        <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-muted-foreground">
                           <span>Score: {submission.score}/{submission.totalQuestions}</span>
                           <span>•</span>
                           <span>{submission.submittedAt.toLocaleDateString()}</span>
-                          <span>•</span>
-                          <span>{submission.submittedAt.toLocaleTimeString()}</span>
                         </div>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2">
                         <Badge 
                           variant={submission.percentage >= 70 ? 'default' : submission.percentage >= 50 ? 'secondary' : 'destructive'}
-                          className="text-lg px-3 py-1"
+                          className="text-sm px-2 py-1"
                         >
                           {submission.percentage}%
                         </Badge>
@@ -311,7 +309,7 @@ export default function StudentDashboard() {
                           size="sm"
                           onClick={() => router.push(`/student/dashboard/submission/${submission.id}`)}
                         >
-                          View Details
+                          Details
                         </Button>
                       </div>
                     </div>
