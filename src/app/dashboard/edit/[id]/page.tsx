@@ -259,7 +259,6 @@ export default function EditExamPage() {
           <div className="flex-1 flex flex-col">
             <h1 className="text-xl font-semibold tracking-tight">Edit Exam</h1>
             <div className="text-xs text-brand-primary/80 font-medium">
-              🛠️ Powered by LogikSutra AI Recruitment
             </div>
           </div>
           <div className="hidden items-center gap-2 md:ml-auto md:flex">

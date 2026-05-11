@@ -398,7 +398,6 @@ export default function TakeExamPage() {
               <CardHeader>
                 <CardTitle>Camera & Microphone Required</CardTitle>
                 <div className="text-xs text-brand-primary/80 font-medium">
-                  🔒 Secured by LogikSutra AI Recruitment
                 </div>
               </CardHeader>
               <CardContent>
@@ -514,7 +513,6 @@ export default function TakeExamPage() {
             <CardHeader>
                 <CardTitle>Question Palette</CardTitle>
                 <div className="text-xs text-brand-primary/70 font-medium">
-                  ⚡ LogikSutra AI Proctoring
                 </div>
             </CardHeader>
             <CardContent className="grid grid-cols-5 gap-2">
@@ -588,7 +586,7 @@ export default function TakeExamPage() {
                <GraduationCap className="h-2 w-2 md:h-3 md:w-3" />
                <span className="hidden md:inline text-xs">ProctorLink</span>
              </div>
-             <div className="text-xs text-gray-300 hidden md:block" style={{fontSize: '8px'}}>LogikSutra AI</div>
+             <div className="text-xs text-gray-300 hidden md:block" style={{fontSize: '8px'}}></div>
            </div>
            {/* Status indicator */}
            <div className="absolute top-1 right-1 md:top-2 md:right-2">
@@ -612,7 +610,6 @@ export default function TakeExamPage() {
               {dialogMessage}
             </AlertDialogDescription>
             <div className="text-xs text-brand-primary/70 font-medium bg-brand-light/10 px-2 py-1 rounded mt-2">
-              🛡️ LogikSutra AI Recruitment Security System
             </div>
           </AlertDialogHeader>
           <AlertDialogFooter>

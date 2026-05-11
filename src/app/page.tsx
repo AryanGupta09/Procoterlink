@@ -335,7 +335,7 @@ export default function Home() {
             <GraduationCap className="h-4 w-4 text-brand-primary" />
             <span className="text-sm font-semibold text-brand-dark">ProctorLink</span>
           </div>
-          <p className="text-xs text-brand-medium font-medium">Powered by LogikSutra AI Recruitment</p>
+          <p className="text-xs text-brand-medium font-medium"></p>
         </div>
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center w-full">
           <p className="text-xs text-muted-foreground">&copy; 2024 ProctorLink. All rights reserved.</p>
@@ -350,7 +350,7 @@ export default function Home() {
         </div>
         <div className="text-center">
           <p className="text-xs text-brand-primary/80 font-medium bg-brand-light/20 px-3 py-1 rounded-full">
-            🚀 Powered by LogikSutra AI Recruitment - Advanced Proctoring Solutions
+            🚀  - Advanced Proctoring Solutions
           </p>
         </div>
       </footer>

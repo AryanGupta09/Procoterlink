@@ -14,7 +14,7 @@ export default function ExamResultsPage() {
             <GraduationCap className="w-12 h-12 text-white mb-2" />
             <div className="text-center">
               <div className="text-xl font-bold text-white">ProctorLink</div>
-              <div className="text-xs text-brand-light/90 font-medium">Powered by LogikSutra AI Recruitment</div>
+              <div className="text-xs text-brand-light/90 font-medium"></div>
             </div>
           </div>
           <div className="flex justify-center mb-4">
@@ -30,7 +30,7 @@ export default function ExamResultsPage() {
             <p className="text-brand-dark mb-4">You may now close this window.</p>
             <div className="bg-brand-light/20 border border-brand-medium/30 rounded-lg p-4 mb-6">
               <p className="text-xs text-brand-primary/80 font-medium">
-                🏆 Exam processed by LogikSutra AI Recruitment Technology
+                🏆 Exam Completed
               </p>
               <p className="text-xs text-brand-medium/80 mt-1">
                 Advanced proctoring and anti-cheating measures were active
@@ -44,7 +44,7 @@ export default function ExamResultsPage() {
         <div className="border-t bg-gray-50 px-8 py-4 rounded-b-lg">
           <div className="text-center">
             <p className="text-xs text-brand-medium/80 font-medium">
-              ✨ Thank you for using LogikSutra AI Recruitment Platform
+              ✨ Thank you for using ProctorLink
             </p>
           </div>
         </div>

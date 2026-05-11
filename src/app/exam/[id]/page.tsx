@@ -177,7 +177,6 @@ export default function ExamTakerDetailsPage() {
             <GraduationCap className="w-16 h-16 text-white drop-shadow-lg mb-2" />
             <div className="text-center">
               <div className="text-2xl font-bold text-white">ProctorLink</div>
-              <div className="text-xs text-brand-light/90 font-medium">Powered by LogikSutra AI Recruitment</div>
             </div>
           </div>
           {loading ? (
@@ -324,9 +323,6 @@ export default function ExamTakerDetailsPage() {
                     By proceeding, you consent to camera monitoring, screen recording, and our anti-cheating measures during the exam.
                   </p>
                   <div className="mt-3 pt-3 border-t border-gray-200">
-                    <p className="text-xs text-brand-primary/80 font-medium text-center bg-brand-light/20 px-2 py-1 rounded">
-                      🔒 Secured by LogikSutra AI Recruitment Technology
-                    </p>
                   </div>
                 </div>
               </div>
@@ -341,11 +337,6 @@ export default function ExamTakerDetailsPage() {
           </form>
         </CardContent>
         <div className="border-t bg-gray-50 px-8 py-4 rounded-b-lg">
-          <div className="text-center">
-            <p className="text-xs text-brand-medium/80 font-medium">
-              ⚡ Powered by LogikSutra AI Recruitment - Intelligent Proctoring System
-            </p>
-          </div>
         </div>
       </Card>
     </div>

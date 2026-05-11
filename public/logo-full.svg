@@ -15,7 +15,7 @@
   <text x="70" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1A2A80">ProctorLink</text>
   
   <!-- Subtitle -->
-  <text x="70" y="40" font-family="Arial, sans-serif" font-size="10" fill="#7A85C1">Powered by LogikSutra AI Recruitment</text>
+  <text x="70" y="40" font-family="Arial, sans-serif" font-size="10" fill="#7A85C1">Secure Exam Platform</text>
   
   <!-- Decorative elements -->
   <circle cx="190" cy="15" r="3" fill="#B2B0E8" opacity="0.6"/>

@@ -13,7 +13,7 @@
   
   <!-- Text part -->
   <text x="45" y="16" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A2A80">ProctorLink</text>
-  <text x="45" y="28" font-family="Arial, sans-serif" font-size="8" fill="#7A85C1">Powered by LogikSutra AI</text>
+  <text x="45" y="28" font-family="Arial, sans-serif" font-size="8" fill="#7A85C1">Secure Exam Platform</text>
   
   <!-- Define gradient -->
   <defs>

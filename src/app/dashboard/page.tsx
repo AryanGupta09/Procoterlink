@@ -313,7 +313,7 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="text-xs text-brand-primary/80 font-medium bg-brand-light/20 px-3 py-1 rounded-full inline-block w-fit">
-          🚀 Powered by LogikSutra AI Recruitment - Advanced Exam Management
+          🚀  - Advanced Exam Management
         </div>
       </div>
       <Card>
@@ -323,7 +323,7 @@ export default function Dashboard() {
             Manage your exams and view their status.
           </CardDescription>
           <div className="text-xs text-brand-primary/70 font-medium bg-brand-light/10 px-2 py-1 rounded inline-block w-fit">
-            📊 LogikSutra AI Analytics
+            📊 
           </div>
         </CardHeader>
         <CardContent>

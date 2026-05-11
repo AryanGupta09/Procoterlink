@@ -245,7 +245,7 @@ export default function ExamVerificationPage() {
               <GraduationCap className="h-6 w-6" />
               <span className="text-lg font-bold">ProctorLink</span>
             </div>
-            <span className="text-xs text-brand-light/90 font-medium">Powered by LogikSutra AI Recruitment</span>
+            <span className="text-xs text-brand-light/90 font-medium">Secure Exam Platform</span>
           </div>
           <CardTitle className="text-2xl font-bold flex items-center justify-center gap-2">
             <Camera className="h-6 w-6" />
@@ -481,7 +481,7 @@ export default function ExamVerificationPage() {
                 </ul>
                 <div className="mt-3 pt-3 border-t border-brand-medium/20">
                   <p className="text-xs text-brand-primary/80 font-medium text-center">
-                    🤖 AI-Powered Identity Verification by LogikSutra
+                    Identity Verification
                   </p>
                 </div>
               </div>
@@ -492,7 +492,6 @@ export default function ExamVerificationPage() {
               <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
                 <h4 className="text-lg font-semibold text-gray-800 mb-2 text-center">📋 Capture Status</h4>
                 <p className="text-xs text-brand-primary/70 font-medium text-center mb-4 bg-brand-light/10 px-2 py-1 rounded">
-                  Powered by LogikSutra AI Recruitment
                 </p>
                 
                 {/* Student Photo Status */}

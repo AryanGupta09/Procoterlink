@@ -186,7 +186,7 @@ function ResultsContent() {
             <div className="flex flex-col gap-2">
                 <h1 className="text-lg font-semibold md:text-2xl">Exam Results</h1>
                 <div className="text-xs text-brand-primary/80 font-medium bg-brand-light/20 px-3 py-1 rounded-full inline-block w-fit">
-                    📊 Powered by LogikSutra AI Recruitment - Advanced Analytics
+                    📊  - Advanced Analytics
                 </div>
             </div>
             
@@ -198,7 +198,7 @@ function ResultsContent() {
                                 <CardTitle>Results for: {examTitle}</CardTitle>
                                 <CardDescription>Showing participant scores and statuses for the selected exam.</CardDescription>
                                 <div className="text-xs text-brand-primary/70 font-medium bg-brand-light/10 px-2 py-1 rounded inline-block w-fit">
-                                    🎯 LogikSutra AI Proctoring Results
+                                    🎯 
                                 </div>
                             </div>
                             <div className="flex gap-2">

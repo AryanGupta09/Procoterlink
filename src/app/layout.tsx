@@ -4,12 +4,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { AuthProvider } from '@/context/AuthContext';
 
 export const metadata: Metadata = {
-  title: 'ProctorLink - Powered by LogikSutra AI Recruitment',
-  description: 'Advanced online proctoring platform for secure exams. Intelligent exam creation, AI-powered proctoring, and comprehensive analytics powered by LogikSutra AI Recruitment.',
-  keywords: 'online exams, proctoring, AI recruitment, secure testing, LogikSutra, exam platform',
-  authors: [{ name: 'LogikSutra AI Recruitment' }],
-  creator: 'LogikSutra AI Recruitment',
-  publisher: 'LogikSutra AI Recruitment',
+  title: 'ProctorLink - Secure Online Examination Platform',
+  description: 'Advanced online proctoring platform for secure exams. Intelligent exam creation, AI-powered proctoring, and comprehensive analytics.',
+  keywords: 'online exams, proctoring, AI, secure testing, exam platform',
+  authors: [{ name: 'ProctorLink' }],
+  creator: 'ProctorLink',
+  publisher: 'ProctorLink',
   icons: {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'ProctorLink - Advanced Online Proctoring',
-    description: 'Secure online examination platform powered by LogikSutra AI Recruitment technology.',
+    description: 'Secure online examination platform.',
     type: 'website',
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'ProctorLink - Powered by LogikSutra AI',
+    title: 'ProctorLink - Advanced Online Proctoring',
     description: 'Advanced online proctoring platform for secure exams.',
     images: ['/icon.svg'],
   },

@@ -264,7 +264,7 @@ export default function CreateExamPage() {
             </div>
           </div>
           <div className="text-xs text-brand-primary/80 font-medium bg-brand-light/20 px-3 py-1 rounded-full inline-block w-fit">
-            🤖 Powered by LogikSutra AI Recruitment - Intelligent Exam Creation
+            🤖  - Intelligent Exam Creation
           </div>
         </div>
         <div className="grid gap-4 md:grid-cols-[1fr_250px] lg:grid-cols-3 lg:gap-8">

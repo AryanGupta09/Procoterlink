@@ -1,7 +1,7 @@
 {
-  "name": "ProctorLink - Powered by LogikSutra AI Recruitment",
+  "name": "ProctorLink",
   "short_name": "ProctorLink",
-  "description": "Advanced online proctoring platform for secure exams powered by LogikSutra AI Recruitment",
+  "description": "Advanced online proctoring platform for secure exams",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#1A2A80",
