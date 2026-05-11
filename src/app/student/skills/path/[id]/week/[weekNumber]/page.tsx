@@ -149,7 +149,7 @@ export default function WeekChaptersPage() {
     return null;
   }
 
-  const week = learningPath.roadmap.weeks.find(w => w.week === weekNumber);
+  const week = learningPath.roadmap?.weeks?.find(w => w.week === weekNumber);
 
   return (
     <div className="max-w-5xl mx-auto p-6 flex flex-col gap-6">

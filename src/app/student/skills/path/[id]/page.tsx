@@ -143,7 +143,17 @@ export default function LearningPathDetailPage() {
       }
 
       if (data.success && data.tip) {
-        setMotivationalTip(data.tip);
+        // tip can be string or object {tip: string} or {message: string}
+        const tipData = data.tip;
+        if (typeof tipData === 'string') {
+          setMotivationalTip({ message: tipData });
+        } else if (tipData.tip) {
+          setMotivationalTip({ message: tipData.tip });
+        } else if (tipData.message) {
+          setMotivationalTip(tipData);
+        } else {
+          setMotivationalTip({ message: JSON.stringify(tipData) });
+        }
       }
     } catch (error: any) {
       const errorMessage = error.message || 'Failed to generate motivational tip.';
@@ -206,18 +216,18 @@ export default function LearningPathDetailPage() {
             </div>
             <Progress value={learningPath.progress} className="h-2" />
           </div>
-          <div className="flex gap-4 text-sm">
-            <div className="flex items-center gap-2">
-              <Clock className="h-4 w-4" />
-              <span>{roadmap.duration}</span>
+            <div className="flex gap-4 text-sm flex-wrap">
+              <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                <span>{roadmap?.duration}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-green-600" />
+                <span>{(learningPath.completedWeeks || []).length} of {(roadmap?.weeks || []).length} weeks completed</span>
+              </div>
+              <Badge variant="secondary">{learningPath.skillLevel}</Badge>
+              <Badge variant="outline">{learningPath.hoursPerWeek} hrs/week</Badge>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-green-600" />
-              <span>{learningPath.completedWeeks.length} of {roadmap.weeks.length} weeks completed</span>
-            </div>
-            <Badge variant="secondary">{learningPath.skillLevel}</Badge>
-            <Badge variant="outline">{learningPath.hoursPerWeek} hrs/week</Badge>
-          </div>
         </CardContent>
       </Card>
 
@@ -233,8 +243,8 @@ export default function LearningPathDetailPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
-          {roadmap.weeks.map((week, index) => {
-            const isCompleted = learningPath.completedWeeks.includes(week.week);
+          {(roadmap?.weeks || []).map((week, index) => {
+            const isCompleted = (learningPath.completedWeeks || []).includes(week.week);
             return (
               <div key={week.week} className="space-y-3">
                 <div className="flex items-start justify-between">
@@ -304,7 +314,7 @@ export default function LearningPathDetailPage() {
                   </div>
                 </div>
 
-                {index < roadmap.weeks.length - 1 && <Separator className="mt-4" />}
+                {index < (roadmap?.weeks || []).length - 1 && <Separator className="mt-4" />}
               </div>
             );
           })}

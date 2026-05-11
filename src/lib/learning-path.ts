@@ -151,7 +151,7 @@ export async function toggleWeekCompletion(
     completedWeeks = completedWeeks.filter(w => w !== weekNumber);
   }
 
-  const totalWeeks = path.roadmap.weeks.length;
+  const totalWeeks = path.roadmap?.weeks?.length || 1;
   const progress = Math.round((completedWeeks.length / totalWeeks) * 100);
 
   await updateLearningPathProgress(pathId, completedWeeks, progress);
