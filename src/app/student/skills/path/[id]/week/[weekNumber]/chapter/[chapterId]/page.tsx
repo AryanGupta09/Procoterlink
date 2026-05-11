@@ -172,6 +172,7 @@ export default function ChapterDetailPage() {
       ) : (
         <div className="space-y-6">
           {/* Introduction */}
+          {content.introduction && (
           <Card>
             <CardHeader>
               <CardTitle>Introduction</CardTitle>
@@ -184,9 +185,26 @@ export default function ChapterDetailPage() {
               </div>
             </CardContent>
           </Card>
+          )}
 
-          {/* Sections */}
-          {content.sections.map((section, index) => (
+          {/* Main Content */}
+          {(content as any).mainContent && (
+            <Card>
+              <CardHeader>
+                <CardTitle>Content</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="prose prose-slate max-w-none">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {(content as any).mainContent}
+                  </ReactMarkdown>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Sections (old format) */}
+          {(content as any).sections && Array.isArray((content as any).sections) && (content as any).sections.map((section: any, index: number) => (
             <Card key={index}>
               <CardHeader>
                 <CardTitle>{section.heading}</CardTitle>
@@ -197,15 +215,13 @@ export default function ChapterDetailPage() {
                     {section.content}
                   </ReactMarkdown>
                 </div>
-
-                {/* Code Examples */}
-                {section.codeExamples && section.codeExamples.length > 0 && (
+                {section.codeExamples && Array.isArray(section.codeExamples) && section.codeExamples.length > 0 && (
                   <div className="space-y-4">
                     <h4 className="font-semibold flex items-center gap-2">
                       <Code className="h-4 w-4" />
                       Code Examples
                     </h4>
-                    {section.codeExamples.map((example, idx) => (
+                    {section.codeExamples.map((example: any, idx: number) => (
                       <div key={idx} className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         <div className="flex items-center justify-between mb-2">
                           <Badge variant="secondary">{example.language}</Badge>
@@ -222,21 +238,15 @@ export default function ChapterDetailPage() {
                     ))}
                   </div>
                 )}
-
-                {/* Definitions */}
-                {section.definitions && section.definitions.length > 0 && (
+                {section.definitions && Array.isArray(section.definitions) && section.definitions.length > 0 && (
                   <div className="space-y-3">
                     <h4 className="font-semibold">Key Definitions</h4>
-                    {section.definitions.map((def, idx) => (
-                      <div key={idx} className="bg-blue-50 dark:bg-blue-950 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
-                        <h5 className="font-semibold text-blue-900 dark:text-blue-100 mb-1">
-                          {def.term}
-                        </h5>
-                        <p className="text-sm text-blue-800 dark:text-blue-200">{def.definition}</p>
+                    {section.definitions.map((def: any, idx: number) => (
+                      <div key={idx} className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                        <h5 className="font-semibold text-blue-900 mb-1">{def.term}</h5>
+                        <p className="text-sm text-blue-800">{def.definition}</p>
                         {def.example && (
-                          <p className="text-xs text-blue-700 dark:text-blue-300 mt-2 italic">
-                            Example: {def.example}
-                          </p>
+                          <p className="text-xs text-blue-700 mt-2 italic">Example: {def.example}</p>
                         )}
                       </div>
                     ))}
@@ -246,35 +256,38 @@ export default function ChapterDetailPage() {
             </Card>
           ))}
 
-          {/* Key Takeaways */}
+          {/* Key Points / Key Takeaways */}
+          {((content as any).keyPoints || (content as any).keyTakeaways) && (
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5" />
-                Key Takeaways
+                Key Points
               </CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2">
-                {content.keyTakeaways.map((takeaway, idx) => (
+                {((content as any).keyPoints || (content as any).keyTakeaways || []).map((point: string, idx: number) => (
                   <li key={idx} className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>{takeaway}</span>
+                    <span>{point}</span>
                   </li>
                 ))}
               </ul>
             </CardContent>
           </Card>
+          )}
 
-          {/* Practice Exercises */}
-          {content.practiceExercises && content.practiceExercises.length > 0 && (
+          {/* Exercises / Practice */}
+          {((content as any).exercises || (content as any).practiceExercises) && 
+           ((content as any).exercises || (content as any).practiceExercises || []).length > 0 && (
             <Card>
               <CardHeader>
                 <CardTitle>Practice Exercises</CardTitle>
               </CardHeader>
               <CardContent>
                 <ol className="space-y-3 list-decimal list-inside">
-                  {content.practiceExercises.map((exercise, idx) => (
+                  {((content as any).exercises || (content as any).practiceExercises || []).map((exercise: string, idx: number) => (
                     <li key={idx} className="pl-2">{exercise}</li>
                   ))}
                 </ol>
@@ -283,6 +296,7 @@ export default function ChapterDetailPage() {
           )}
 
           {/* Summary */}
+          {content.summary && (
           <Card>
             <CardHeader>
               <CardTitle>Summary</CardTitle>
@@ -295,6 +309,7 @@ export default function ChapterDetailPage() {
               </div>
             </CardContent>
           </Card>
+          )}
         </div>
       )}
     </div>
