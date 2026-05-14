@@ -11,6 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Logo } from '@/components/ui/logo';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
                 <Link href="#faq" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">FAQ</Link>
             </nav>
             <div className="ml-auto sm:ml-4 flex items-center gap-2">
+              <ThemeToggle />
               <Button asChild variant="outline" size="sm">
                 <Link href="/student/login">Student</Link>
               </Button>
@@ -42,10 +44,10 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-4">
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline">
-                    The Gold Standard in Secure Online Examinations
+                    ProctorLink: Secure Online Examinations with a Student-Focused Grow &amp; Career Hub
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    ProctorLink offers a robust platform for creating, managing, and conducting secure online exams with AI-powered tools and advanced proctoring features.
+                    ProctorLink offers secure online examinations with AI-powered proctoring, plus a dedicated Grow &amp; Career Hub to help students build skills and advance their careers.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -172,7 +174,7 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Use Cases</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Designed for Every Need</h2>
                  <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  ProctorLink is versatile enough to support a wide range of assessment scenarios.
+                  ProctorLink is versatile enough to support a wide range of assessment scenarios — and empowers students with a dedicated Grow &amp; Career Hub.
                 </p>
               </div>
             </div>
@@ -335,10 +337,10 @@ export default function Home() {
             <GraduationCap className="h-4 w-4 text-brand-primary" />
             <span className="text-sm font-semibold text-brand-dark">ProctorLink</span>
           </div>
-          <p className="text-xs text-brand-medium font-medium"></p>
+          <p className="text-xs text-brand-medium font-medium">Secure Online Examinations with a Student-Focused Grow &amp; Career Hub</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center w-full">
-          <p className="text-xs text-muted-foreground">&copy; 2024 ProctorLink. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">&copy; 2026 ProctorLink. All rights reserved.</p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
             <Link href="/legal/terms" className="text-xs hover:underline underline-offset-4" prefetch={false}>
               Terms of Service

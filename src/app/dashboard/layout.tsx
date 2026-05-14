@@ -12,7 +12,6 @@ import {
   User,
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -33,6 +32,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useAuth } from '@/context/AuthContext';
 import { auth } from '@/lib/firebase';
 import { signOut } from 'firebase/auth';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export default function DashboardLayout({
   children,
@@ -223,17 +223,17 @@ export default function DashboardLayout({
           <div className="w-full flex-1">
              {/* Can add search here if needed */}
           </div>
+          <ThemeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="secondary" size="icon" className="rounded-full">
-                 <Image
-                  src="https://placehold.co/36x36.png"
-                  data-ai-hint="user avatar"
-                  width={36}
-                  height={36}
-                  alt="Avatar"
-                  className="rounded-full"
-                />
+              <Button variant="ghost" size="icon" className="rounded-full p-0 h-9 w-9">
+                <div className="h-9 w-9 rounded-full bg-brand-primary flex items-center justify-center text-white font-semibold text-sm select-none ring-2 ring-brand-medium/40">
+                  {user?.displayName
+                    ? user.displayName.split(' ').map((n: string) => n[0]).join('').toUpperCase().slice(0, 2)
+                    : user?.email
+                      ? user.email[0].toUpperCase()
+                      : <User className="h-4 w-4" />}
+                </div>
                 <span className="sr-only">Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger>

@@ -245,7 +245,7 @@ export default function ExamVerificationPage() {
               <GraduationCap className="h-6 w-6" />
               <span className="text-lg font-bold">ProctorLink</span>
             </div>
-            <span className="text-xs text-brand-light/90 font-medium">Secure Exam Platform</span>
+            <span className="text-xs text-brand-light/90 font-medium">Secure Exams &amp; Student Grow &amp; Career Hub</span>
           </div>
           <CardTitle className="text-2xl font-bold flex items-center justify-center gap-2">
             <Camera className="h-6 w-6" />

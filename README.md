@@ -1,6 +1,6 @@
-# ProctorLink
+# ProctorLink: Secure Online Examinations with a Student-Focused Grow & Career Hub
 
-A secure online examination platform with AI-powered features for organizers and students.
+A secure online examination platform with AI-powered proctoring features and a dedicated Grow & Career Hub for student skill development and career growth.
 
 ## Tech Stack
 

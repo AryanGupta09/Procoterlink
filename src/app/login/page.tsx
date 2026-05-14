@@ -11,6 +11,7 @@ import { auth } from '@/lib/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 
 export default function LoginPage() {
@@ -36,13 +37,16 @@ export default function LoginPage() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-background">
+      <div className="absolute top-4 right-4">
+        <ThemeToggle />
+      </div>
       <Card className="mx-auto max-w-sm w-full">
         <CardHeader>
           <div className="flex flex-col items-center mb-4">
             <GraduationCap className="w-12 h-12 text-brand-primary mb-2" />
             <div className="text-center">
               <div className="text-xl font-bold text-brand-dark">ProctorLink</div>
-              <div className="text-xs text-brand-medium/80 font-medium"></div>
+              <div className="text-xs text-brand-medium/80 font-medium">Secure Exams &amp; Student Grow &amp; Career Hub</div>
             </div>
           </div>
           <CardTitle className="text-2xl text-center">Organizer Login</CardTitle>

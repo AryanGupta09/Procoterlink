@@ -2,11 +2,12 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { AuthProvider } from '@/context/AuthContext';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'ProctorLink - Secure Online Examination Platform',
-  description: 'Advanced online proctoring platform for secure exams. Intelligent exam creation, AI-powered proctoring, and comprehensive analytics.',
-  keywords: 'online exams, proctoring, AI, secure testing, exam platform',
+  title: 'ProctorLink: Secure Online Examinations with a Student-Focused Grow & Career Hub',
+  description: 'ProctorLink offers secure online examinations with AI-powered proctoring and a student-focused Grow & Career Hub for skill development and career growth.',
+  keywords: 'online exams, proctoring, AI, secure testing, exam platform, career hub, student growth, skill development',
   authors: [{ name: 'ProctorLink' }],
   creator: 'ProctorLink',
   publisher: 'ProctorLink',
@@ -20,8 +21,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'ProctorLink - Advanced Online Proctoring',
-    description: 'Secure online examination platform.',
+    title: 'ProctorLink: Secure Online Examinations with a Student-Focused Grow & Career Hub',
+    description: 'Secure online examinations with a student-focused Grow & Career Hub.',
     type: 'website',
     images: [
       {
@@ -34,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'ProctorLink - Advanced Online Proctoring',
-    description: 'Advanced online proctoring platform for secure exams.',
+    title: 'ProctorLink: Secure Online Examinations with a Student-Focused Grow & Career Hub',
+    description: 'Secure online examinations with AI-powered proctoring and a student-focused Grow & Career Hub.',
     images: ['/icon.svg'],
   },
 };
@@ -58,10 +59,12 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="ProctorLink" />
       </head>
       <body className="font-body antialiased">
-        <AuthProvider>
-          {children}
-          <Toaster />
-        </AuthProvider>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <AuthProvider>
+            {children}
+            <Toaster />
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
