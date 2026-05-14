@@ -153,7 +153,7 @@ export default function SkillsAndCareerHubPage() {
             </ul>
           </CardContent>
           <CardFooter className="p-6 pt-0">
-            <Button asChild variant="outline">
+            <Button asChild variant="default" className="bg-brand-primary hover:bg-brand-dark text-white">
               <Link href="/student/skills/path">Open Generator</Link>
             </Button>
           </CardFooter>

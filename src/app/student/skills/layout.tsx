@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Logo } from '@/components/ui/logo';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export default function CareerHubLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -19,7 +20,7 @@ export default function CareerHubLayout({ children }: { children: React.ReactNod
         <div className="container flex h-14 items-center">
           <Link href="/student/skills" className="flex items-center gap-2" prefetch={false}>
             <Logo size="sm" />
-            <span className="text-sm font-semibold">ProctorLink CareerHub</span>
+            <span className="text-sm font-semibold">CareerHub</span>
           </Link>
           <nav className="ml-auto hidden items-center gap-2 sm:flex">
             <Button asChild variant="ghost">
@@ -37,6 +38,7 @@ export default function CareerHubLayout({ children }: { children: React.ReactNod
             <Button asChild variant="outline">
               <Link href="/student/dashboard">Dashboard</Link>
             </Button>
+            <ThemeToggle />
           </nav>
         </div>
       </header>
@@ -113,7 +115,7 @@ export default function CareerHubLayout({ children }: { children: React.ReactNod
         <div className="container flex flex-col gap-2 py-6 items-center text-center">
           <div className="flex items-center gap-2">
             <Logo size="sm" />
-            <span className="text-sm font-semibold">ProctorLink CareerHub</span>
+            <span className="text-sm font-semibold">CareerHub</span>
           </div>
           <p className="text-xs text-muted-foreground">Grow faster with curated learning and AI guidance.</p>
         </div>
