@@ -40,6 +40,8 @@ interface Exam {
   isPaused?: boolean;
 }
 
+const MAX_WARNINGS = 10;
+
 export default function TakeExamPage() {
   const router = useRouter();
   const params = useParams();
@@ -281,8 +283,14 @@ export default function TakeExamPage() {
         const wc = warningCountRef.current + 1;
         warningCountRef.current = wc;
         setWarningCount(wc);
-        setDialogMessage(`You exited fullscreen. Warning #${wc}. Please return to fullscreen.`);
-        setShowWarningDialog(true);
+        if (wc >= MAX_WARNINGS) {
+          setDialogMessage(`You have received too many violations. Your exam is being auto-submitted.`);
+          setShowWarningDialog(true);
+          setTimeout(() => submitExam(answersRef.current), 2000);
+        } else {
+          setDialogMessage(`You exited fullscreen. This is warning #${wc}. Please return to fullscreen.`);
+          setShowWarningDialog(true);
+        }
       }
     };
 
@@ -291,9 +299,15 @@ export default function TakeExamPage() {
         const wc = warningCountRef.current + 1;
         warningCountRef.current = wc;
         setWarningCount(wc);
-        setDialogMessage(`Tab switch detected. Warning #${wc}.`);
-        setShowWarningDialog(true);
-        toast({ title: 'Warning: Tab Switch Detected', variant: 'destructive' });
+        if (wc >= MAX_WARNINGS) {
+          setDialogMessage(`You have received too many violations. Your exam is being auto-submitted.`);
+          setShowWarningDialog(true);
+          setTimeout(() => submitExam(answersRef.current), 2000);
+        } else {
+          setDialogMessage(`Tab switch detected. This is warning #${wc}.`);
+          setShowWarningDialog(true);
+          toast({ title: `Warning #${wc}: Tab Switch Detected`, variant: 'destructive' });
+        }
       }
     };
 
@@ -302,7 +316,12 @@ export default function TakeExamPage() {
       const wc = warningCountRef.current + 1;
       warningCountRef.current = wc;
       setWarningCount(wc);
-      toast({ title: 'Warning: Copy/Paste Disabled', variant: 'destructive' });
+      if (wc >= MAX_WARNINGS) {
+        toast({ title: `Auto-submitting: Too many violations`, variant: 'destructive' });
+        setTimeout(() => submitExam(answersRef.current), 2000);
+      } else {
+        toast({ title: `Warning #${wc}: Copy/Paste Disabled`, variant: 'destructive' });
+      }
     };
 
     const handleKeyPress = (e: KeyboardEvent) => {
