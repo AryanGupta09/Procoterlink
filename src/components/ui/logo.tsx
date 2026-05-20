@@ -50,7 +50,7 @@ export function Logo({ className, showText = true, size = 'md' }: LogoProps) {
       {showText && (
         <div className="flex flex-col">
           <span className={cn("font-bold text-brand-dark", textSizeClasses[size])}>
-            ProctorLink
+            ProcterLink
           </span>
           {size !== 'sm' && (
             <span className="text-xs text-brand-medium/80 font-medium -mt-1">

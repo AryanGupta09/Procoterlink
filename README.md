@@ -1,4 +1,4 @@
-# ProctorLink: Secure Online Examinations with a Student-Focused Grow & Career Hub
+# ProcterLink: Secure Online Examinations with a Student-Focused Grow & Career Hub
 
 A secure online examination platform with AI-powered proctoring features and a dedicated Grow & Career Hub for student skill development and career growth.
 
@@ -20,7 +20,7 @@ A secure online examination platform with AI-powered proctoring features and a d
 ### 1. Clone & Install
 ```bash
 git clone <your-repo>
-cd proctorlink
+cd ProcterLink
 npm install
 ```
 

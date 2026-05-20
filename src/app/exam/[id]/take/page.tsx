@@ -636,7 +636,7 @@ export default function TakeExamPage() {
           </div>
           <div className="absolute bottom-1 left-1 bg-black/70 text-white px-1 rounded text-xs flex items-center gap-1">
             <GraduationCap className="h-3 w-3" />
-            <span>ProctorLink</span>
+            <span>ProcterLink</span>
           </div>
           <div className="absolute top-1 right-1">
             <div className={`w-2 h-2 rounded-full ${hasCameraPermission ? 'bg-green-400 animate-pulse' : 'bg-red-400'}`} />

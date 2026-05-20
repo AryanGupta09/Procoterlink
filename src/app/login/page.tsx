@@ -45,7 +45,7 @@ export default function LoginPage() {
           <div className="flex flex-col items-center mb-4">
             <GraduationCap className="w-12 h-12 text-brand-primary mb-2" />
             <div className="text-center">
-              <div className="text-xl font-bold text-brand-dark">ProctorLink</div>
+              <div className="text-xl font-bold text-brand-dark">ProcterLink</div>
               <div className="text-xs text-brand-medium/80 font-medium">Secure Exams &amp; Student Grow &amp; Career Hub</div>
             </div>
           </div>

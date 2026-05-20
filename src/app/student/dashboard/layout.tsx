@@ -9,6 +9,7 @@ import { signOut } from 'firebase/auth';
 import { auth, db } from '@/lib/firebase';
 import { collection, query, where, getDocs, updateDoc, doc } from 'firebase/firestore';
 import { useEffect } from 'react';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export default function StudentLayout({ children }: { children: React.ReactNode }) {
   const { user, userRole } = useAuth();
@@ -60,7 +61,7 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
         <div className="container flex h-14 items-center justify-between gap-2">
           <Link href="/student/dashboard" className="flex items-center space-x-2 shrink-0">
             <GraduationCap className="h-5 w-5 text-brand-primary" />
-            <span className="font-bold text-base sm:text-xl">ProctorLink</span>
+            <span className="font-bold text-base sm:text-xl">ProcterLink</span>
             <span className="hidden sm:inline text-xs text-brand-medium/80 ml-1">Student Portal</span>
           </Link>
           
@@ -89,6 +90,7 @@ export default function StudentLayout({ children }: { children: React.ReactNode 
               <LogOut className="h-4 w-4 sm:mr-1" />
               <span className="hidden sm:inline">Logout</span>
             </Button>
+            <ThemeToggle />
           </nav>
         </div>
       </header>

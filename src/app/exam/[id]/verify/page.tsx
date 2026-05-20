@@ -243,7 +243,7 @@ export default function ExamVerificationPage() {
           <div className="flex flex-col items-center mb-4">
             <div className="flex items-center gap-2 mb-2">
               <GraduationCap className="h-6 w-6" />
-              <span className="text-lg font-bold">ProctorLink</span>
+              <span className="text-lg font-bold">ProcterLink</span>
             </div>
             <span className="text-xs text-brand-light/90 font-medium">Secure Exams &amp; Student Grow &amp; Career Hub</span>
           </div>

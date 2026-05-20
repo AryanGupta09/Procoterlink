@@ -5,12 +5,12 @@ import { AuthProvider } from '@/context/AuthContext';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'ProctorLink: Secure Online Examinations with a Student-Focused Grow & Career Hub',
-  description: 'ProctorLink offers secure online examinations with AI-powered proctoring and a student-focused Grow & Career Hub for skill development and career growth.',
+  title: 'ProcterLink: Secure Online Examinations with a Student-Focused Grow & Career Hub',
+  description: 'ProcterLink offers secure online examinations with AI-powered proctoring and a student-focused Grow & Career Hub for skill development and career growth.',
   keywords: 'online exams, proctoring, AI, secure testing, exam platform, career hub, student growth, skill development',
-  authors: [{ name: 'ProctorLink' }],
-  creator: 'ProctorLink',
-  publisher: 'ProctorLink',
+  authors: [{ name: 'ProcterLink' }],
+  creator: 'ProcterLink',
+  publisher: 'ProcterLink',
   icons: {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'ProctorLink: Secure Online Examinations with a Student-Focused Grow & Career Hub',
+    title: 'ProcterLink: Secure Online Examinations with a Student-Focused Grow & Career Hub',
     description: 'Secure online examinations with a student-focused Grow & Career Hub.',
     type: 'website',
     images: [
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
         url: '/logo.svg',
         width: 120,
         height: 40,
-        alt: 'ProctorLink Logo',
+        alt: 'ProcterLink Logo',
       },
     ],
   },
   twitter: {
     card: 'summary',
-    title: 'ProctorLink: Secure Online Examinations with a Student-Focused Grow & Career Hub',
+    title: 'ProcterLink: Secure Online Examinations with a Student-Focused Grow & Career Hub',
     description: 'Secure online examinations with AI-powered proctoring and a student-focused Grow & Career Hub.',
     images: ['/icon.svg'],
   },
@@ -56,7 +56,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#3B38A0" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="ProctorLink" />
+        <meta name="apple-mobile-web-app-title" content="ProcterLink" />
       </head>
       <body className="font-body antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>

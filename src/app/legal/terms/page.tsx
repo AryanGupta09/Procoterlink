@@ -1,7 +1,7 @@
 export default function TermsOfServicePage() {
     return (
       <div>
-        <h1>Terms of Service for ProctorLink</h1>
+        <h1>Terms of Service for ProcterLink</h1>
         <p>Last Updated: July 26, 2024</p>
   
         <h2>1. Agreement to Terms</h2>
@@ -11,7 +11,7 @@ export default function TermsOfServicePage() {
   
         <h2>2. Description of Service</h2>
         <p>
-            ProctorLink provides a platform for educational institutions and organizations ("Organizers") to create, manage, and administer online exams for their users ("Students").
+            ProcterLink provides a platform for educational institutions and organizations ("Organizers") to create, manage, and administer online exams for their users ("Students").
         </p>
   
         <h2>3. User Accounts</h2>
@@ -32,7 +32,7 @@ export default function TermsOfServicePage() {
   
         <h2>5. Intellectual Property</h2>
         <p>
-            The Service and its original content, features, and functionality are and will remain the exclusive property of ProctorLink and its licensors.
+            The Service and its original content, features, and functionality are and will remain the exclusive property of ProcterLink and its licensors.
         </p>
   
         <h2>6. Termination</h2>
@@ -42,7 +42,7 @@ export default function TermsOfServicePage() {
   
         <h2>7. Limitation of Liability</h2>
         <p>
-            In no event shall ProctorLink, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
+            In no event shall ProcterLink, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
         </p>
   
         <h2>8. Changes to Terms</h2>
@@ -52,7 +52,7 @@ export default function TermsOfServicePage() {
   
         <h2>9. Contact Us</h2>
         <p>
-            If you have any questions about these Terms, please contact us at: support@proctorlink.example.com
+            If you have any questions about these Terms, please contact us at: support@ProcterLink.example.com
         </p>
       </div>
     );

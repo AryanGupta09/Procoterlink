@@ -1,6 +1,6 @@
 ## Data Flow Diagrams (DFD)
 
-This document provides DFDs for the ProctorLink application, showing key external entities, processes, data stores, and data flows.
+This document provides DFDs for the ProcterLink application, showing key external entities, processes, data stores, and data flows.
 
 ### Level 0 – Context Diagram
 
@@ -21,9 +21,9 @@ flowchart LR
   GoogleAI[Google AI (Genkit/Gemini)]:::ext
 
   %% System Boundary
-  subgraph ProctorLink Web App (Next.js)
+  subgraph ProcterLink Web App (Next.js)
     direction TB
-    P0((ProctorLink System)):::process
+    P0((ProcterLink System)):::process
   end
 
   %% Data Stores

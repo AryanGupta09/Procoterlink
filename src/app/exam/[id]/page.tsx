@@ -176,7 +176,7 @@ export default function ExamTakerDetailsPage() {
            <div className="flex flex-col items-center mb-4">
             <GraduationCap className="w-16 h-16 text-white drop-shadow-lg mb-2" />
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">ProctorLink</div>
+              <div className="text-2xl font-bold text-white">ProcterLink</div>
             </div>
           </div>
           {loading ? (

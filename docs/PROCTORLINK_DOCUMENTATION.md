@@ -1,10 +1,10 @@
-# ProctorLink - Platform Documentation
+# ProcterLink - Platform Documentation
 
-This document is a comprehensive, living reference for the ProctorLink platform. It covers product scope, features, architecture, data models, flows, APIs (client ↔ Firebase interactions), security, deployment, and a forward-looking roadmap. Diagrams are included in Mermaid format (viewable in many IDEs and markdown renderers).
+This document is a comprehensive, living reference for the ProcterLink platform. It covers product scope, features, architecture, data models, flows, APIs (client ↔ Firebase interactions), security, deployment, and a forward-looking roadmap. Diagrams are included in Mermaid format (viewable in many IDEs and markdown renderers).
 
 ## 1. Product Overview
 
-- ProctorLink is a secure online examination platform with organizer (admin) and student roles.
+- ProcterLink is a secure online examination platform with organizer (admin) and student roles.
 - Organizers (admins) can create, manage, and analyze exams with AI-assisted tools.
 - Students can take exams, view results, and receive tailored learning and career guidance in the Grow & Career Hub.
 - The system uses Firebase (Firestore) for data persistence and Next.js (App Router) for the web front-end.

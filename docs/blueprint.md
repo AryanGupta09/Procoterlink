@@ -1,4 +1,4 @@
-# ProctorLink Source Blueprint
+# ProcterLink Source Blueprint
 
 This blueprint describes the `src/` architecture: directories, responsibilities, routing, key flows, dependency rules, conventions, and extension points. Use it as a practical guide while working in this codebase.
 
@@ -182,4 +182,4 @@ Key flows:
 - [ ] Topic mastery analytics and organizer dashboards
 
 ---
-This blueprint complements `docs/PROCTORLINK_DOCUMENTATION.md` and `docs/SRS.md`. Keep it updated alongside code changes.
+This blueprint complements `docs/ProcterLink_DOCUMENTATION.md` and `docs/SRS.md`. Keep it updated alongside code changes.

@@ -13,7 +13,7 @@ export default function ExamResultsPage() {
           <div className="flex flex-col items-center mb-4">
             <GraduationCap className="w-12 h-12 text-white mb-2" />
             <div className="text-center">
-              <div className="text-xl font-bold text-white">ProctorLink</div>
+              <div className="text-xl font-bold text-white">ProcterLink</div>
               <div className="text-xs text-brand-light/90 font-medium"></div>
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function ExamResultsPage() {
         <div className="border-t bg-gray-50 px-8 py-4 rounded-b-lg">
           <div className="text-center">
             <p className="text-xs text-brand-medium/80 font-medium">
-              ✨ Thank you for using ProctorLink
+              ✨ Thank you for using ProcterLink
             </p>
           </div>
         </div>

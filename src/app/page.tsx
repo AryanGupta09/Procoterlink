@@ -44,10 +44,10 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-4">
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-headline">
-                    ProctorLink: Secure Online Examinations with a Student-Focused Grow &amp; Career Hub
+                    ProcterLink: Secure Online Examinations with a Student-Focused Grow &amp; Career Hub
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    ProctorLink offers secure online examinations with AI-powered proctoring, plus a dedicated Grow &amp; Career Hub to help students build skills and advance their careers.
+                    ProcterLink offers secure online examinations with AI-powered proctoring, plus a dedicated Grow &amp; Career Hub to help students build skills and advance their careers.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -174,7 +174,7 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">Use Cases</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Designed for Every Need</h2>
                  <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  ProctorLink is versatile enough to support a wide range of assessment scenarios — and empowers students with a dedicated Grow &amp; Career Hub.
+                  ProcterLink is versatile enough to support a wide range of assessment scenarios — and empowers students with a dedicated Grow &amp; Career Hub.
                 </p>
               </div>
             </div>
@@ -221,7 +221,7 @@ export default function Home() {
                 <div className="space-y-3">
                     <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">What Our Users Are Saying</h2>
                     <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Don't just take our word for it. Here's what organizers think about ProctorLink.
+                        Don't just take our word for it. Here's what organizers think about ProcterLink.
                     </p>
                 </div>
                 <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:grid-cols-2 lg:gap-12 mt-8">
@@ -235,7 +235,7 @@ export default function Home() {
                                 <Star className="w-5 h-5 text-yellow-400 fill-yellow-400"/>
                             </div>
                             <blockquote className="text-lg font-semibold leading-snug">
-                                “ProctorLink has revolutionized how we conduct our certification exams. The AI tools are a lifesaver, and the security features give us complete peace of mind.”
+                                “ProcterLink has revolutionized how we conduct our certification exams. The AI tools are a lifesaver, and the security features give us complete peace of mind.”
                             </blockquote>
                         </CardHeader>
                         <CardContent className="flex items-center gap-4">
@@ -287,7 +287,7 @@ export default function Home() {
             </div>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger>Is ProctorLink secure?</AccordionTrigger>
+                <AccordionTrigger>Is ProcterLink secure?</AccordionTrigger>
                 <AccordionContent>
                   Yes, security is our top priority. We employ multiple layers of protection, including tab and screen restrictions, copy-paste prevention, and mandatory camera monitoring to ensure the integrity of every exam.
                 </AccordionContent>
@@ -335,12 +335,12 @@ export default function Home() {
         <div className="flex flex-col items-center gap-2">
           <div className="flex items-center gap-2">
             <GraduationCap className="h-4 w-4 text-brand-primary" />
-            <span className="text-sm font-semibold text-brand-dark">ProctorLink</span>
+            <span className="text-sm font-semibold text-brand-dark">ProcterLink</span>
           </div>
           <p className="text-xs text-brand-medium font-medium">Secure Online Examinations with a Student-Focused Grow &amp; Career Hub</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center w-full">
-          <p className="text-xs text-muted-foreground">&copy; 2026 ProctorLink. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">&copy; 2026 ProcterLink. All rights reserved.</p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
             <Link href="/legal/terms" className="text-xs hover:underline underline-offset-4" prefetch={false}>
               Terms of Service

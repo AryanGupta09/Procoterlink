@@ -67,7 +67,7 @@ export default function DashboardLayout({
             <Link href="/" className="flex items-center gap-2 font-semibold" prefetch={false}>
               <GraduationCap className="h-6 w-6 text-brand-primary" />
               <div className="flex flex-col">
-                <span className="text-brand-dark font-bold">ProctorLink</span>
+                <span className="text-brand-dark font-bold">ProcterLink</span>
                 <span className="text-xs text-brand-medium/80 font-medium -mt-1">Secure Exam Platform</span>
               </div>
             </Link>
@@ -129,7 +129,7 @@ export default function DashboardLayout({
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
-                <Button size="sm" className="w-full" onClick={() => window.open('mailto:support@proctorlink.com', '_blank')}>
+                <Button size="sm" className="w-full" onClick={() => window.open('mailto:support@ProcterLink.com', '_blank')}>
                   Contact Support
                 </Button>
               </CardContent>
@@ -158,8 +158,8 @@ export default function DashboardLayout({
                 >
                   <GraduationCap className="h-6 w-6 text-brand-primary" />
                   <div className="flex flex-col">
-                    <span className="text-brand-dark font-bold">ProctorLink</span>
-                    <span className="text-xs text-brand-medium/80 font-medium -mt-1">ProctorLink</span>
+                    <span className="text-brand-dark font-bold">ProcterLink</span>
+                    <span className="text-xs text-brand-medium/80 font-medium -mt-1">ProcterLink</span>
                   </div>
                 </Link>
                 <Link
@@ -211,7 +211,7 @@ export default function DashboardLayout({
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button size="sm" className="w-full" onClick={() => window.open('mailto:support@proctorlink.com', '_blank')}>
+                    <Button size="sm" className="w-full" onClick={() => window.open('mailto:support@ProcterLink.com', '_blank')}>
                       Contact Support
                     </Button>
                   </CardContent>
@@ -244,7 +244,7 @@ export default function DashboardLayout({
               <DropdownMenuItem onClick={() => router.push('/dashboard/settings')}>
                 Settings
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => window.open('mailto:support@proctorlink.com', '_blank')}>
+              <DropdownMenuItem onClick={() => window.open('mailto:support@ProcterLink.com', '_blank')}>
                 Support
               </DropdownMenuItem>
               <DropdownMenuSeparator />

@@ -1,10 +1,10 @@
-# ProctorLink – Discussion Overview
+# ProcterLink – Discussion Overview
 
-This document explains, in plain language, what ProctorLink is, what problems it solves, who it helps, and the main ways people will use it. It complements the detailed technical documentation in the `docs/` folder.
+This document explains, in plain language, what ProcterLink is, what problems it solves, who it helps, and the main ways people will use it. It complements the detailed technical documentation in the `docs/` folder.
 
 
-## What is ProctorLink?
-ProctorLink is a secure online examination platform that helps organizations create and deliver exams, and helps students take those exams with confidence. Beyond testing, it offers a Grow & Career Hub—an area dedicated to improving skills through recommended courses, learning paths, resume enhancement, and AI-powered mock interviews.
+## What is ProcterLink?
+ProcterLink is a secure online examination platform that helps organizations create and deliver exams, and helps students take those exams with confidence. Beyond testing, it offers a Grow & Career Hub—an area dedicated to improving skills through recommended courses, learning paths, resume enhancement, and AI-powered mock interviews.
 
 
 ## Why does it matter?
@@ -66,7 +66,7 @@ ProctorLink is a secure online examination platform that helps organizations cre
 
 
 ## Where to learn more
-- High-level documentation: `docs/PROCTORLINK_DOCUMENTATION.md`
+- High-level documentation: `docs/ProcterLink_DOCUMENTATION.md`
 - SRS (requirements): `docs/SRS.md`
 - Source blueprint: `docs/blueprint.md`
 - Source overview: `docs/SRC_OVERVIEW.md`

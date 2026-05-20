@@ -32,11 +32,27 @@ export default function SignUpPage() {
       return;
     }
      try {
-      // Check if referral code is valid
-      const referralDocRef = doc(db, "referralCodes", referralCode);
-      const referralDoc = await getDoc(referralDocRef);
+      // Check if referral code is valid — search by 'code' field
+      const { collection, query, where, getDocs } = await import('firebase/firestore');
+      const codesQuery = query(
+        collection(db, "referralCodes"),
+        where("code", "==", referralCode.trim().toUpperCase())
+      );
+      const codesSnapshot = await getDocs(codesQuery);
 
-      if (!referralDoc.exists() || !referralDoc.data().active) {
+      // Also try document ID match (backward compatibility)
+      let isValid = false;
+      if (!codesSnapshot.empty) {
+        const codeDoc = codesSnapshot.docs[0];
+        isValid = codeDoc.data().active === true;
+      } else {
+        // Try by document ID
+        const referralDocRef = doc(db, "referralCodes", referralCode.trim());
+        const referralDoc = await getDoc(referralDocRef);
+        isValid = referralDoc.exists() && referralDoc.data().active === true;
+      }
+
+      if (!isValid) {
         toast({
           variant: "destructive",
           title: "Sign-up Failed",
@@ -73,7 +89,7 @@ export default function SignUpPage() {
           <div className="flex flex-col items-center mb-4">
             <GraduationCap className="w-12 h-12 text-brand-primary mb-2" />
             <div className="text-center">
-              <div className="text-xl font-bold text-brand-dark">ProctorLink</div>
+              <div className="text-xl font-bold text-brand-dark">ProcterLink</div>
               <div className="text-xs text-brand-medium/80 font-medium"></div>
             </div>
           </div>

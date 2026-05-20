@@ -22,7 +22,7 @@ export async function getPineconeClient(): Promise<Pinecone> {
 }
 
 // Pinecone index configuration
-export const PINECONE_INDEX_NAME = 'proctorlink';
+export const PINECONE_INDEX_NAME = 'ProcterLink';
 export const PINECONE_DIMENSIONS = 3072; // Match your Pinecone index configuration
 
 export async function getPineconeIndex(indexName: string = PINECONE_INDEX_NAME) {

@@ -1,12 +1,12 @@
 export default function PrivacyPolicyPage() {
     return (
       <div>
-        <h1>Privacy Policy for ProctorLink</h1>
+        <h1>Privacy Policy for ProcterLink</h1>
         <p>Last Updated: July 26, 2024</p>
 
         <h2>1. Introduction</h2>
         <p>
-            Welcome to ProctorLink. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our application.
+            Welcome to ProcterLink. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our application.
         </p>
 
         <h2>2. Information We Collect</h2>
@@ -55,7 +55,7 @@ export default function PrivacyPolicyPage() {
 
         <h2>6. Contact Us</h2>
         <p>
-            If you have questions or comments about this Privacy Policy, please contact us at: support@proctorlink.example.com
+            If you have questions or comments about this Privacy Policy, please contact us at: support@ProcterLink.example.com
         </p>
       </div>
     );
